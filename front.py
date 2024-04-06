@@ -1,5 +1,6 @@
 import streamlit as st
 from eda import upload_file
+from model import formulario
 # from eda import visualize
 
 # Injeta o CSS do Bootstrap ou estilos personalizados
@@ -25,7 +26,7 @@ st.set_page_config(page_title=" POD BANK - APPLICATION ", layout="wide")
 inject_bootstrap()
 
 # Seleção de páginas
-page = st.sidebar.selectbox("Navegação", ["HOME", "SERVIÇOS", "INSIGHTS", "SOBRE NÓS"])
+page = st.sidebar.selectbox("Navegação", ["HOME", "SERVIÇOS CRÉDITO", "INSIGHTS", "SOBRE NÓS"])
 
 import streamlit as st
 import base64
@@ -58,10 +59,11 @@ if page == "HOME":
     # Usar markdown para exibir a imagem com CSS personalizado
     st.markdown(image_html, unsafe_allow_html=True)
 
-elif page == "SERVIÇOS":
-    st.title("SERVIÇOS")
+elif page == "SERVIÇOS CRÉDITO":
+    st.title("ANÁLISE DE CRÉDITO")
     # Conteúdo da página secundária 1
-    st.write("Conteúdo da Página Secundária 1.")
+    st.write("Formulário de informações")
+    formulario()
     create_footer()
 
 elif page == "INSIGHTS":
