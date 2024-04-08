@@ -1,7 +1,7 @@
 import streamlit as st
 from eda import upload_file
 from model import formulario
-# from eda import visualize
+from about import  *
 
 # Injeta o CSS do Bootstrap ou estilos personalizados
 def inject_bootstrap():
@@ -76,6 +76,8 @@ elif page == "INSIGHTS":
     create_footer()
 
 elif page == "SOBRE NÓS":
-    st.title("NÓS")
-    st.write("parametros de configuração da API")
+    st.title("Sobre  a PoD Academy")
+
+    st.write()
+    sobre_nos()
     create_footer()
